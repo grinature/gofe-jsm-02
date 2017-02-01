@@ -1,6 +1,7 @@
 *.psd
 *.tmp
 *.log
+info*.*
 test*.*
 00*.*
 00*

@@ -71,7 +71,7 @@ function requestUserName() {
             return false;
     }
 
-    debugger;
+    // debugger;
 
     userRing.currentUser.userName = userName.trim();
     return true;
@@ -81,7 +81,7 @@ function getUserAccess() {
     var userName = userRing.currentUser.userName,
         maxUsers = userRing.users.maxUsers;
 
-    debugger;
+    // debugger;
 
 //    if(!Array.prototype.indexOf) { // Some old browsers
     if(Array.prototype.indexOf) { // Some old browsers
@@ -100,14 +100,21 @@ function getUserAccess() {
 }
 
 function confirmUserAuthorization() {
-    console.log("Congratulations ! You are AUTHORIZED under Login-name < " + userRing.currentUser.userName + " > !");
+    var msg = "Congratulations ! You are AUTHORIZED under Login-name < " + userRing.currentUser.userName + " > !";
+
+    alert(msg);
+    console.log(msg);
+
     return true;
 }
 
 function badUserCredentials() {
-    console.log("Authentication failed : The user name < " +
+    var msg = "Authentication failed : The user name < " +
         userRing.currentUser.userName +
-        " > is UNKNOWN !\n\tTry to LOGIN again by pressing F5(refresh) in the browser !");
+        " > is UNKNOWN !\nTry to LOGIN again by pressing F5(refresh) in the browser !";
+
+    alert(msg);
+    console.log(msg);
 
     return false;
 }

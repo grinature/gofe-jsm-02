@@ -1,6 +1,6 @@
 var isSysLog = true;
-// var isDebug = false;
-var isDebug = true;
+ var isDebug = false;
+//var isDebug = true;
 
 function sysLog(message) {
     var sysLogPrefix = "SysLog :: ";

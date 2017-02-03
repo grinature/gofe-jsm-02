@@ -81,10 +81,12 @@ function getUserAccess() {
     var userName = userRing.currentUser.userName,
         maxUsers = userRing.users.maxUsers;
 
-    // debugger;
+     debugger;
 
-//    if(!Array.prototype.indexOf) { // Some old browsers
-    if(Array.prototype.indexOf) { // Some old browsers
+    userRing.currentUser.gotAccess  = false;
+
+    if(!Array.prototype.indexOf) { // Some old browsers
+//    if(Array.prototype.indexOf) { // Some old browsers
         for(var cntr = 0; cntr < maxUsers; cntr++) {
             if(userName === userRing.users.userList[cntr]) {
                 userRing.currentUser.gotAccess = true;
@@ -96,7 +98,7 @@ function getUserAccess() {
         userRing.currentUser.gotAccess = true;
     }
 
-    return userRing.currentUser.gotAccess ? true : false;
+    return userRing.currentUser.gotAccess;
 }
 
 function confirmUserAuthorization() {

@@ -81,7 +81,7 @@ function getUserAccess() {
     var userName = userRing.currentUser.userName,
         maxUsers = userRing.users.maxUsers;
 
-     debugger;
+    // debugger;
 
     userRing.currentUser.gotAccess  = false;
 
